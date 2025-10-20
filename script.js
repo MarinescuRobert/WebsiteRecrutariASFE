@@ -25,7 +25,7 @@ function initMap() {
   // ---- KML LAYER SECTION ----
   // Make sure your .KML file is publicly accessible!
   // Example: hosted on GitHub, Google Drive (public), or your ASFE site.
-  const kmlUrl = "https://YOUR_DOMAIN/path-to-your-map.kml";
+  const kmlUrl = "https://raw.githubusercontent.com/MarinescuRobert/WebsiteRecrutariASFE/refs/heads/main/Harta_Bucurestiul_Energetic.kml";
 
   const kmlLayer = new google.maps.KmlLayer({
     url: kmlUrl,
