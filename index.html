@@ -2,18 +2,14 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-    <style>
-      #map {
-        height: 600px;
-        width: 100%;
-        border-radius: 12px;      
-      }
-    </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bucureștiul Energetic</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body onload="initMap()">
 
   <!-- ====== NAVBAR ====== -->
@@ -44,27 +40,7 @@
     <p class="subtitle">Locurile unde energia este produsă, consumată și transformată.</p>
 
     <div class="map-container">
-
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXXQHdQJSY5fezEudD32SU5uIPTB7_wn8"></script>
-      <script>
-        function initMap() {
-          const bucharestBounds = {
-            north: 44.55,
-            south: 44.32,
-            west: 25.95,
-            east: 26.25,
-          };
-
-          const map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: 44.4268, lng: 26.1025 },
-            zoom: 12,
-            restriction: {
-              latLngBounds: bucharestBounds,
-              strictBounds: true,
-            },
-          });
-        }
-      </script>
+      <div id="map"></div>
     </div>
   </section>
 
@@ -107,6 +83,9 @@
           <h3>Stefan</h3>
           <p>Marketing</p>
         </div>
+        <div class="member">
+          <h3>Alt Membru</h3>
+          <p>Coordonator & Strategie</p>
         </div>
       </div>
     </div>
@@ -117,5 +96,10 @@
     <p>© 2025 ASFE | Proiect realizat de echipa „Energia Orașului Invizibil”</p>
   </footer>
 
+  <!-- Google Maps + Script -->
+  <script src="script.js"></script>
+  <script async 
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
 </body>
 </html>

@@ -109,6 +109,13 @@ nav a:hover {
   box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
 }
 
+#map {
+  height: 600px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+
 /* ===== ABOUT SECTION ===== */
 .about-section {
   background-color: #1b263b;
