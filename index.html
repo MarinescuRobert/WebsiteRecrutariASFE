@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+    <style>
+      #map {
+        height: 600px;
+        width: 100%;
+        border-radius: 12px;      
+      }
+    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bucureștiul Energetic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body onload="initMap()">
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar">
+    <div class="container">
+      <img src="images/ASFE_logo.png" alt="ASFE Logo" class="logo" />
+      <nav>
+        <a href="#home">Acasă</a>
+        <a href="#map">Harta</a>
+        <a href="#about">Despre</a>
+        <a href="#team">Echipă</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Bucureștiul Energetic ⚡</h1>
+      <p>Descoperă Bucureștiul prin energia care îl face să pulseze.</p>
+      <a href="#map" class="btn">Explorează harta</a>
+    </div>
+  </section>
+
+  <!-- ====== MAP SECTION ====== -->
+  <section id="map" class="map-section">
+    <h2>Harta Energetică a Bucureștiului</h2>
+    <p class="subtitle">Locurile unde energia este produsă, consumată și transformată.</p>
+
+    <div class="map-container">
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXXQHdQJSY5fezEudD32SU5uIPTB7_wn8"></script>
+      <script>
+        function initMap() {
+          const bucharestBounds = {
+            north: 44.55,
+            south: 44.32,
+            west: 25.95,
+            east: 26.25,
+          };
+
+          const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 44.4268, lng: 26.1025 },
+            zoom: 12,
+            restriction: {
+              latLngBounds: bucharestBounds,
+              strictBounds: true,
+            },
+          });
+        }
+      </script>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>Despre Proiect</h2>
+      <p>
+        Bucureștiul este un organism energetic complex. Prin această hartă interactivă, 
+        dorim să facem vizibil fluxul invizibil de energie care alimentează orașul nostru 
+        și să inspirăm un consum mai responsabil. <br><br>
+        Proiect realizat de studenți din cadrul Facultății de Energetică, 
+        Universitatea Politehnica din București.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== TEAM SECTION ====== -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <h2>Echipa noastră</h2>
+      <div class="team-grid">
+        <div class="member">
+          <h3>Marinescu Robert</h3>
+          <p>Grafica & IT</p>
+        </div>
+        <div class="member">
+          <h3>Iuli</h3>
+          <p>Documentare & Surse de energie</p>
+        </div>
+        <div class="member">
+          <h3>Plînge Alexandru</h3>
+          <p>Copywriting & Prezentare</p>
+        </div>
+        <div class="member">
+          <h3>Albu Rares-Stefan</h3>
+          <p>PR</p>
+        </div>
+        <div class="member">
+          <h3>Stefan</h3>
+          <p>Marketing</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 ASFE | Proiect realizat de echipa „Energia Orașului Invizibil”</p>
+  </footer>
+
+</body>
+</html>
