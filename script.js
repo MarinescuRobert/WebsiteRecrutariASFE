@@ -25,7 +25,7 @@ function initMap() {
   // ---- KML LAYER SECTION ----
   // Make sure your .KML file is publicly accessible!
   // Example: hosted on GitHub, Google Drive (public), or your ASFE site.
-  const kmlUrl = "https://drive.google.com/uc?export=download&id=1E1CLOfWkOaLZL_pvXftm6GjegW9bGSTU"
+  const kmlUrl = "https://drive.google.com/uc?export=download&id=1c33AvNQs5QwaxuydeNJ0YUc8HczXyotq"
   const kmlLayer = new google.maps.KmlLayer({
     url: kmlUrl,
     map: map,
